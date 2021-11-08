@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/todo-list/static/css/main.43fb6f15.chunk.css",
+    "main.js": "/todo-list/static/js/main.3bb9dfc8.chunk.js",
+    "main.js.map": "/todo-list/static/js/main.3bb9dfc8.chunk.js.map",
+    "runtime-main.js": "/todo-list/static/js/runtime-main.50f6d1c9.js",
+    "runtime-main.js.map": "/todo-list/static/js/runtime-main.50f6d1c9.js.map",
+    "static/css/2.e13dd720.chunk.css": "/todo-list/static/css/2.e13dd720.chunk.css",
+    "static/js/2.1e497154.chunk.js": "/todo-list/static/js/2.1e497154.chunk.js",
+    "static/js/2.1e497154.chunk.js.map": "/todo-list/static/js/2.1e497154.chunk.js.map",
+    "static/js/3.f390b9d9.chunk.js": "/todo-list/static/js/3.f390b9d9.chunk.js",
+    "static/js/3.f390b9d9.chunk.js.map": "/todo-list/static/js/3.f390b9d9.chunk.js.map",
+    "index.html": "/todo-list/index.html",
+    "static/css/2.e13dd720.chunk.css.map": "/todo-list/static/css/2.e13dd720.chunk.css.map",
+    "static/css/main.43fb6f15.chunk.css.map": "/todo-list/static/css/main.43fb6f15.chunk.css.map",
+    "static/js/2.1e497154.chunk.js.LICENSE.txt": "/todo-list/static/js/2.1e497154.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/todo-list/static/media/pacifico-vietnamese-400-normal.ffd2091a.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.50f6d1c9.js",
+    "static/css/2.e13dd720.chunk.css",
+    "static/js/2.1e497154.chunk.js",
+    "static/css/main.43fb6f15.chunk.css",
+    "static/js/main.3bb9dfc8.chunk.js"
+  ]
+}
