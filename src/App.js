@@ -1,42 +1,37 @@
 import React from 'react';
-import {
-  ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  theme,
-} from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
+import { ChakraProvider } from '@chakra-ui/react';
+import Header from './components/Header';
+import theme from './theme';
+import "./theme/styles.css";
+import "react-big-calendar/lib/css/react-big-calendar.css";
+import "@fontsource/pacifico";
+import MainConatainer from './components/MainContainer';
+import { Provider } from 'react-redux';
+import { persistor, store } from './store';
 
-function App() {
+import { Flex } from '@chakra-ui/layout';
+import Sidebar from './components/sidebar/Sidebar';
+
+import { PersistGate } from 'redux-persist/integration/react';
+
+
+const App = () => {
   return (
     <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
-          </VStack>
-        </Grid>
-      </Box>
+      <Provider store={store}>
+        <PersistGate loading={null} persistor={persistor}>
+          <Header/>
+          <Flex 
+            direction={{base: 'column', md: 'row'}}
+            gridGap={10} 
+          >
+            <MainConatainer/>
+            <Sidebar />
+          </Flex>
+        </PersistGate>
+      </Provider>
     </ChakraProvider>
-  );
+  )
 }
 
 export default App;
