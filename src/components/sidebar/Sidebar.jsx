@@ -1,5 +1,7 @@
-import { Box } from "@chakra-ui/layout";
+import { Box, VStack } from "@chakra-ui/layout";
+import MyCalendar from "../calendar/Calendar";
 import WeekDeadline from "./weekDeadline";
+
 
 const Sidebar = () => {
 
@@ -7,10 +9,13 @@ const Sidebar = () => {
     <Box 
       p={4}
       mr={{base: 0, md: 12}}
-      w={{base: 'full', md: 'md'}}
+      w={{base: 'full', md: 'lg'}}
       maxWidth="2xl" 
     >
-      <WeekDeadline />
+      <VStack spacing={20}>
+        <WeekDeadline />
+        <MyCalendar />
+      </VStack>
     </Box>
     
   )

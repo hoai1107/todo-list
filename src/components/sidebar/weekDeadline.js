@@ -1,5 +1,5 @@
 import { Heading, List, ListItem, Text, Box } from "@chakra-ui/layout"
-import { formatDistance, isThisWeek, parseISO } from "date-fns";
+import { formatDistance, isAfter, isThisWeek, parseISO } from "date-fns";
 import { useSelector } from "react-redux";
 
 function calculateTimeLeft(deadline){
@@ -14,9 +14,11 @@ const WeekDeadline = () => {
   .map(task => {
     return {...task, deadline: parseISO(task.deadline)};
   })
-  .filter(task => task.completed === false && isThisWeek(task.deadline, {weekStartsOn: 1}))
 
-  // tasks = tasks.filter(task => task.completed === false && isThisWeek(task.deadline, {weekStartsOn: 1}));
+  console.log(tasks);
+
+  tasks = tasks.filter(task => task.completed === false && isThisWeek(task.deadline, {weekStartsOn: 1}) && isAfter(task.deadline, new Date()))
+
 
   return (
     <Box shadow="lg" p={8} bgColor="gray.100">
